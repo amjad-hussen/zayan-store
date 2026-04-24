@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Rahim Uddin",
+    "role": "Regular Customer",
+    "image": "https://i.ibb.co/dsWLGVVx/rahim.jpg",
+    "message": "Products are always fresh and delivery is very fast. Highly recommended!"
+  },
+  {
+    "id": 2,
+    "name": "Sadia Khan",
+    "role": "Housewife",
+    "image": "https://i.ibb.co/0pG9QfHD/girl.jpg",
+    "message": "Quality is very good and prices are reasonable. I buy groceries every week."
+  },
+  {
+    "id": 3,
+    "name": "Arif Hossain",
+    "role": "Chef",
+    "image": "https://i.ibb.co/qYS01jSN/boy.webp",
+    "message": "Best place to get fresh ingredients for cooking. Very satisfied!"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Premium Rice",
+    "price": 60,
+    "category": "Rice & Grains",
+    "image": "https://i.ibb.co/zhj5jP5z/rice.jpg",
+    "description": "High quality premium rice for daily meals."
+  },
+  {
+    "id": 2,
+    "title": "Fresh Potato",
+    "price": 30,
+    "category": "Vegetables",
+    "image": "https://i.ibb.co/d4vMhPgL/potato.jpg",
+    "description": "Farm fresh potatoes, perfect for everyday cooking."
+  },
+  {
+    "id": 3,
+    "title": "Soybean Oil",
+    "price": 150,
+    "category": "Cooking Essentials",
+    "image": "https://i.ibb.co/bZ5gkh8/soyabin.jpg",
+    "description": "Healthy and refined soybean oil for cooking."
+  },
+  {
+    "id": 4,
+    "title": "Onion",
+    "price": 40,
+    "category": "Vegetables",
+    "image": "https://i.ibb.co/HfH7LZFw/onion.webp",
+    "description": "Fresh onions to enhance your meals."
+  },
+  {
+    "id": 5,
+    "title": "Soft Drinks",
+    "price": 50,
+    "category": "Beverages",
+    "image": "https://i.ibb.co/psvP5CT/drinks.webp",
+    "description": "Refreshing soft drinks for any time."
+  },
+  {
+    "id": 6,
+    "title": "Red Lentils (Dal)",
+    "price": 80,
+    "category": "Pulses",
+    "image": "https://i.ibb.co/2Gg1zBV/dal.jpg",
+    "description": "Nutritious red lentils for healthy meals."
+  },
+  {
+    "id": 7,
+    "title": "Sugar",
+    "price": 70,
+    "category": "Cooking Essentials",
+    "image": "https://i.ibb.co/n88Q64wQ/sugar.jpg",
+    "description": "Refined white sugar for tea, sweets and daily cooking."
+  },
+  {
+    "id": 8,
+    "title": "Eggs (Dozen)",
+    "price": 120,
+    "category": "Protein Foods",
+    "image": "https://i.ibb.co/xtnYNkYm/egg.webp",
+    "description": "Fresh farm eggs packed with protein for a healthy diet."
+  }
+]
