@@ -1,6 +1,7 @@
 import Banner from "@/components/home/Banner";
 import DailyEssiential from "@/components/home/DailyEssiential";
 import Features from "@/components/home/Features";
+import OfferBanner from "@/components/home/OfferBanner";
 import Testimonial from "@/components/home/Testimonial";
 import Image from "next/image";
 
@@ -20,6 +21,10 @@ export default function Home() {
 
       <section> 
         <Testimonial></Testimonial>
+      </section>
+
+      <section>
+        <OfferBanner></OfferBanner>
       </section>
 
     </div>

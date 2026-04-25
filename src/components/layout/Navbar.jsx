@@ -154,6 +154,10 @@ const Navbar = () => {
                       <Link href="/cart">🛒 My Cart</Link>
                     </li>
 
+                    <li>
+                      <Link href="/offers">🚪 Offers</Link>
+                    </li>
+
                     <div className="border-t my-1"></div>
 
                     <li>

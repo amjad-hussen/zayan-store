@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "title": "Miniket Rice",
+    "category": "Grains",
+    "price": 52,
+    "oldPrice": 65,
+    "discount": "20% OFF",
+    "image": "https://i.ibb.co/zhj5jP5z/rice.jpg",
+    "shortDescription": "Premium quality Miniket rice for daily meals."
+  },
+  {
+    "id": "2",
+    "title": "Fresh Oil",
+    "category": "Cooking Essentials",
+    "price": 135,
+    "oldPrice": 180,
+    "discount": "25% OFF",
+    "image": "https://i.ibb.co/bZ5gkh8/soyabin.jpg",
+    "shortDescription": "Pure mustard oil for cooking."
+  },
+  {
+    "id": "3",
+    "title": "Fresh Milk 1L",
+    "category": "Dairy",
+    "price": 90,
+    "oldPrice": 110,
+    "discount": "18% OFF",
+    "image": "https://i.ibb.co/3ycn7d67/milk.png",
+    "shortDescription": "Pure and fresh cow milk."
+  },
+  {
+    "id": "4",
+    "title": "Brown Bread",
+    "category": "Bakery",
+    "price": 50,
+    "oldPrice": 65,
+    "discount": "15% OFF",
+    "image": "https://i.ibb.co/4RH2D7Pn/bread.jpg",
+    "shortDescription": "Healthy whole wheat bread."
+  },
+  {
+    "id": "5",
+    "title": "Iodized Table Salt",
+    "category": "Cooking Essentials",
+    "price": 35.2,
+    "oldPrice": 40,
+    "discount": "12% OFF",
+    "image": "https://i.ibb.co/ZzvskGSX/salt.webp",
+    "shortDescription": "Pure iodized salt pack."
+  },
+  {
+    "id": "6",
+    "title": "Soft Drink",
+    "category": "Drinks",
+    "price": 85.8,
+    "oldPrice": 110,
+    "discount": "22% OFF",
+    "image": "https://i.ibb.co/psvP5CT/drinks.webp",
+    "shortDescription": "Refreshing cola drink pack."
+  },
+  {
+    "id": "7",
+    "title": "Potatoes 1kg",
+    "category": "Vegetables",
+    "price": 40,
+    "oldPrice": 55,
+    "discount": "27% OFF",
+    "image": "https://i.ibb.co/Y4gpby3D/alu.webp",
+    "shortDescription": "Fresh farm potatoes."
+  },
+  {
+    "id": "8",
+    "title": "Eggs (12 pcs)",
+    "category": "Dairy",
+    "price": 130,
+    "oldPrice": 150,
+    "discount": "13% OFF",
+    "image": "https://i.ibb.co/xtnYNkYm/egg.webp",
+    "shortDescription": "Farm fresh eggs."
+  }
+]
