@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import toast from "react-hot-toast";
 
-export default function LoginContent() {
+export default function LoginPage() {
   const { loginUser, googleLogin } = useContext(AuthContext);
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -33,7 +33,9 @@ export default function LoginContent() {
 
       setForm({ email: "", password: "" });
 
-      toast.success("Login successful 🎉");
+      toast.success("Login successful 🎉", {
+        id: "login-success"
+      });
 
       setTimeout(() => {
         router.push(from);
@@ -58,7 +60,9 @@ export default function LoginContent() {
     try {
       await googleLogin();
 
-      toast.success("Login successful 🎉");
+      toast.success("Login successful 🎉", {
+        id: "google-login-success"
+      });
 
       setTimeout(() => {
         router.push(from);
@@ -84,15 +88,12 @@ export default function LoginContent() {
 
             {/* EMAIL */}
             <div>
-              <label className="text-sm text-gray-600">
-                Email Address
-              </label>
+              <label className="text-sm text-gray-600">Email Address</label>
 
               <input
                 type="email"
                 name="email"
                 value={form.email}
-                placeholder="Enter your email"
                 onChange={handleChange}
                 className="w-full mt-1 border px-4 py-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary"
                 required
@@ -101,15 +102,12 @@ export default function LoginContent() {
 
             {/* PASSWORD */}
             <div>
-              <label className="text-sm text-gray-600">
-                Password
-              </label>
+              <label className="text-sm text-gray-600">Password</label>
 
               <input
                 type="password"
                 name="password"
                 value={form.password}
-                placeholder="Enter your password"
                 onChange={handleChange}
                 className="w-full mt-1 border px-4 py-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary"
                 required
@@ -119,7 +117,7 @@ export default function LoginContent() {
             {/* LOGIN BUTTON */}
             <button
               disabled={loading}
-              className="w-full bg-secondary text-white py-2.5 rounded-xl hover:opacity-90 active:scale-95 transition disabled:opacity-50"
+              className="w-full bg-secondary text-white py-2.5 rounded-xl disabled:opacity-50"
             >
               {loading ? "Logging in..." : "Login"}
             </button>
@@ -135,12 +133,12 @@ export default function LoginContent() {
             <button
               type="button"
               onClick={handleGoogle}
-              className="w-full border py-2.5 rounded-xl hover:bg-gray-50 transition"
+              className="w-full border py-2.5 rounded-xl hover:bg-gray-50"
             >
               Continue with Google
             </button>
 
-            {/* REGISTER LINK */}
+            {/* REGISTER */}
             <p className="text-sm text-center text-gray-500">
               Don’t have an account?{" "}
               <Link href="/register" className="text-secondary font-medium">
