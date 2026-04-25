@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import toast from "react-hot-toast";
 
-export default function LoginPage() {
+export default function LoginContent() {
   const { loginUser, googleLogin } = useContext(AuthContext);
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -31,23 +31,16 @@ export default function LoginPage() {
     try {
       await loginUser(form.email, form.password);
 
-      // ✅ RESET FORM
-      setForm({
-        email: "",
-        password: "",
-      });
+      setForm({ email: "", password: "" });
 
-      // ✅ SUCCESS TOAST
       toast.success("Login successful 🎉");
 
-      // 🔥 DELAY REDIRECT
       setTimeout(() => {
         router.push(from);
       }, 1200);
 
     } catch (err) {
 
-      // ❌ CLEAN ERROR
       if (err.code === "auth/user-not-found") {
         toast.error("No account found ❌");
       } else if (err.code === "auth/wrong-password") {
