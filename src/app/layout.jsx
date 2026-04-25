@@ -2,6 +2,9 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import AuthProvider from "@/context/AuthContext";
+import { Toaster } from "react-hot-toast";
+import CartProvider from "@/context/CartContext";
 
 const poppins = Poppins(
   {
@@ -18,23 +21,41 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${poppins.className}h-full antialiased`}
+      className={`${poppins.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
 
-        <header className=" md:w-11/12 mx-auto">
-          <Navbar></Navbar>
-        </header>
+        <AuthProvider>
+          <CartProvider>
 
-        <main className=" md:w-11/12 mx-auto">
-          {children}
-        </main>
+            <Toaster
+              position="top-right"
+              toastOptions={{
+                duration: 2000,
+                style: {
+                  borderRadius: "10px",
+                  padding: "12px",
+                  fontSize: "14px",
+                },
+              }}
+            />
+
+            <header className=" w-full md:w-11/12 mx-auto">
+              <Navbar></Navbar>
+            </header>
+
+            <main className=" md:w-11/12 mx-auto">
+              {children}
+            </main>
 
 
-        <footer className="py-2 md:w-11/12 mx-auto">
-          <Footer></Footer>
-        </footer>
+            <footer className="py-2 w-full md:w-11/12 mx-auto">
+              <Footer></Footer>
+            </footer>
 
+
+          </CartProvider>
+        </AuthProvider>
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const EssentialProductsCard = ({ product }) => {
@@ -38,9 +39,11 @@ const EssentialProductsCard = ({ product }) => {
             ৳ {product.price}
           </span>
 
-          <button className="bg-secondary text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 active:scale-95 transition">
-            Buy Now
-          </button>
+          <Link href="/order-now">
+            <button className="bg-secondary text-white px-6 py-2 rounded-xl" >
+              Buy Now
+            </button>
+          </Link>
 
         </div>
       </div>

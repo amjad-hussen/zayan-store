@@ -3,10 +3,14 @@
 import data from "@/data/product.json";
 import Link from "next/link";
 import { use } from "react";
+import { useContext } from "react";
+import { CartContext } from "@/context/CartContext";
+import toast from "react-hot-toast";
 
 export default function ItemDetails({ params }) {
 
   const { id } = use(params);
+  const { addToCart } = useContext(CartContext);
 
   const item = data.find((p) => String(p.id) === String(id));
 
@@ -26,25 +30,36 @@ export default function ItemDetails({ params }) {
     );
   }
 
+  // 🔥 HANDLE ADD TO CART
+  const handleAddToCart = () => {
+    addToCart(item);
+  };
+
+  
+
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
 
+      {/* BACK BUTTON */}
       <Link href="/items">
         <button className="mb-6 text-sm bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition">
           ← Back to Items
         </button>
       </Link>
 
+      {/* MAIN CARD */}
       <div className="bg-white border rounded-2xl shadow-sm p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <div className="rounded-xl overflow-hidden border">
+        {/* IMAGE */}
+        <div className="rounded-xl overflow-hidden border group">
           <img
             src={item.image}
             alt={item.title}
-            className="w-full h-[350px] object-cover hover:scale-105 transition-transform duration-300"
+            className="w-full h-[350px] object-cover group-hover:scale-105 transition duration-300"
           />
         </div>
 
+        {/* INFO */}
         <div className="flex flex-col">
 
           <h1 className="text-3xl font-bold text-primary">
@@ -56,16 +71,18 @@ export default function ItemDetails({ params }) {
               {item.category}
             </span>
 
-            <span className="text-secondary text-xl font-bold">
+            <span className="text-secondary text-2xl font-bold">
               ৳ {item.price}
             </span>
           </div>
 
+          {/* SHORT DESC */}
           <p className="text-gray-500 mt-4 text-sm leading-relaxed">
             {item.shortDescription ||
-              "Fresh premium quality product selected carefully for your daily needs. Best quality guaranteed with fast delivery and affordable pricing."}
+              "Premium quality product with fast delivery and best pricing."}
           </p>
 
+          {/* FULL DESC */}
           <div className="mt-5">
             <h2 className="text-lg font-semibold text-primary mb-2">
               Description
@@ -76,14 +93,20 @@ export default function ItemDetails({ params }) {
             </p>
           </div>
 
-
+          {/* ACTION BUTTONS */}
           <div className="mt-auto pt-6 flex gap-3">
 
-            <button className="flex-1 bg-secondary text-white py-3 rounded-xl hover:opacity-90 active:scale-95 transition">
-              Buy Now
-            </button>
+            
+            <Link href="/order-now">
+              <button  className="bg-secondary text-white px-6 py-2 rounded-xl" >
+                Buy Now
+              </button>
+            </Link>
 
-            <button className="flex-1 border border-secondary text-secondary py-3 rounded-xl hover:bg-secondary hover:text-white transition">
+            <button
+              onClick={handleAddToCart}
+              className="flex-1 border border-secondary text-secondary py-3 rounded-xl hover:bg-secondary hover:text-white transition"
+            >
               Add to Cart
             </button>
 
@@ -92,6 +115,7 @@ export default function ItemDetails({ params }) {
         </div>
       </div>
 
+      {/* EXTRA DETAILS */}
       <div className="mt-8 bg-white border rounded-2xl p-5">
 
         <h2 className="text-xl font-semibold text-primary mb-4">
@@ -107,7 +131,9 @@ export default function ItemDetails({ params }) {
 
           <div className="p-3 bg-gray-50 rounded-lg">
             <p className="text-gray-500">Price</p>
-            <p className="font-semibold text-secondary">৳ {item.price}</p>
+            <p className="font-semibold text-secondary">
+              ৳ {item.price}
+            </p>
           </div>
 
           <div className="p-3 bg-gray-50 rounded-lg">

@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  images: {
+    domains: [
+      "lh3.googleusercontent.com", // Google profile image
+      "i.ibb.co" // তোমার product image
+    ],
+  },
 };
 
 export default nextConfig;
